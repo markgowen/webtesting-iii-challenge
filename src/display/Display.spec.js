@@ -42,3 +42,9 @@ test('displays Locked if the locked prop is true and Unlocked if otherwise', () 
   const label = queryByText(/unlocked/i);
   expect(label).toBeNull();
 });
+
+test('displays Closed if the closed prop is true and Open if otherwise', () => {
+  const { queryByText } = render(<Display closed={true} />);
+  const label = queryByText(/open/i);
+  expect(label).toBeNull();
+});
