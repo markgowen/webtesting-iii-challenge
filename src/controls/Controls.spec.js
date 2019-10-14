@@ -20,12 +20,25 @@ test('toggleLocked is called on lock buttons', () => {
 });
 
 test('toggleClosed is called on close buttons', () => {
+    const toggleClosedMock = jest.fn();
+    const { getByText } = render(
+      <Controls toggleClosed={toggleClosedMock} closed={false} />
+    );
+  
+    fireEvent.click(getByText(/close gate/i));
+  
+    expect(toggleClosedMock).toHaveBeenCalled();
+  });
+
+test('Cannot be closed if locked', () => {
   const toggleClosedMock = jest.fn();
   const { getByText } = render(
-    <Controls toggleClosed={toggleClosedMock} closed={false} />
+    <Controls toggleClosed={toggleClosedMock} locked={true} />
   );
 
-  fireEvent.click(getByText(/close gate/i));
+  fireEvent.click(getByText(/lock gate/i));
 
-  expect(toggleClosedMock).toHaveBeenCalled();
+  expect(toggleClosedMock).not.toHaveBeenCalled();
 });
+
+
