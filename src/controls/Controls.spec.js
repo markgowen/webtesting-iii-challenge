@@ -42,7 +42,8 @@ test('Cannot be closed if locked', () => {
 });
 
 // Closed toggle button is disabled if gate is locked
-// test('Closed toggle button is disabled if gate is locked', () => {
-//     const props = {disabled: 'locked'},
-
-// })
+test('Closed toggle button is disabled if gate is locked', () => {
+  const { queryByText } = render(<Controls locked={true} closed={true} />);
+  const lockButton = queryByText(/unlock gate/i);
+  expect(lockButton.getAttribute('disabled')).toBeNull();
+});
