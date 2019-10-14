@@ -8,9 +8,11 @@ test('it renders correctly', () => {
     expect(render(<Dashboard />)).toMatchSnapshot();
 });
 
-// test('Display and Controls are rendering correctly', () => {
-//     const { getByText } = render(<Dashboard />);
+test('Display and Controls are rendering correctly', () => {
+    const { getByTestId } = render(<Dashboard />);
 
-//     //Display 
-//     getByText
-// });
+    // Display 
+    getByTestId(/display-panel/i);
+    // Controls
+    getByTestId(/button-lock/i);
+});

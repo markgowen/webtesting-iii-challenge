@@ -42,3 +42,7 @@ test('Cannot be closed if locked', () => {
 });
 
 // Closed toggle button is disabled if gate is locked
+// test('Closed toggle button is disabled if gate is locked', () => {
+//     const props = {disabled: 'locked'},
+
+// })
