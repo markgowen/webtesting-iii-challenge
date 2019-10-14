@@ -9,6 +9,13 @@ test('it renders correctly', () => {
   expect(render(<Display />)).toMatchSnapshot();
 });
 
+test('defaults to unlocked and open', () => {
+  const { getByText } = render(<Display />);
+
+  getByText(/open/i);
+  getByText(/unlocked/i);
+});
+
 test('displays if gate is open/closed and if it is locked/unlocked', () => {
   const { getByText } = render(<Display />);
 
