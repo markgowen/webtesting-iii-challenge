@@ -16,6 +16,13 @@ test('displays if gate is open/closed and if it is locked/unlocked', () => {
   getByText(/unlocked/i);
 });
 
+test('displays if gate is open/closed and if it is locked/unlocked', () => {
+  const { getByText } = render(<Display closed={true} />);
+
+  getByText(/closed/i);
+  getByText(/locked/i);
+});
+
 test('when locked or closed use the red-led class', () => {
   const { getByText } = render(<Display closed={true} />);
   //   const label = getByText(/closed/i);
