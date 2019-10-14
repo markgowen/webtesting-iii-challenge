@@ -41,9 +41,15 @@ test('Cannot be closed if locked', () => {
   expect(toggleClosedMock).not.toHaveBeenCalled();
 });
 
-// Closed toggle button is disabled if gate is locked
+// Closed/Lock toggle button is disabled if gate is locked
 test('Closed toggle button is disabled if gate is locked', () => {
   const { queryByText } = render(<Controls locked={true} closed={true} />);
   const lockButton = queryByText(/unlock gate/i);
   expect(lockButton.getAttribute('disabled')).toBeNull();
+});
+
+test('Closed toggle button is disabled if gate is locked', () => {
+  const { queryByText } = render(<Controls locked={true} closed={true} />);
+  const closeButton = queryByText(/open gate/i);
+  expect(closeButton.getAttribute('disabled')).not.toBeNull();
 });
