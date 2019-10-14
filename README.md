@@ -28,12 +28,12 @@ The requirements are listed under the _Minimum Viable Product_ section below.
 
 Follow these steps to setup your git _fork_ and _branch_.
 
-- [ ] Fork this repository.
-- [ ] Use GitHub's website to add your project manager as collaborator on **your fork**.
-- [ ] **Clone your forked version** of the repository (**Not Lambda's**!).
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Commit changes to your `<firstName-lastName>` branch.
-- [ ] Push often to your branch: `git push origin <firstName-lastName>`.
+- [x] Fork this repository.
+- [x] Use GitHub's website to add your project manager as collaborator on **your fork**.
+- [x] **Clone your forked version** of the repository (**Not Lambda's**!).
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Commit changes to your `<firstName-lastName>` branch.
+- [x] Push often to your branch: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -60,18 +60,18 @@ The expected/assumed behavior of the application is listed below.
 
 ### Display Component
 
-- displays if gate is open/closed and if it is locked/unlocked
-- displays 'Closed' if the `closed` prop is `true` and 'Open' if otherwise
-- displays 'Locked' if the `locked` prop is `true` and 'Unlocked' if otherwise
-- when `locked` or `closed` use the `red-led` class
-- when `unlocked` or `open` use the `green-led` class
+- [ ] displays if gate is open/closed and if it is locked/unlocked
+- [ ] displays 'Closed' if the `closed` prop is `true` and 'Open' if otherwise
+- [ ] displays 'Locked' if the `locked` prop is `true` and 'Unlocked' if otherwise
+- [x] when `locked` or `closed` use the `red-led` class
+- [ ] when `unlocked` or `open` use the `green-led` class
 
 ### Controls Component
 
-- provide buttons to toggle the `closed` and `locked` states.
-- buttons' text changes to reflect the state the door will be in if clicked
-- the closed toggle button is disabled if the gate is locked
-- the locked toggle button is disabled if the gate is open
+- [ ] provide buttons to toggle the `closed` and `locked` states.
+- [ ] buttons' text changes to reflect the state the door will be in if clicked
+- [ ] the closed toggle button is disabled if the gate is locked
+- [ ] the locked toggle button is disabled if the gate is open
 
 ## Stretch Problem
 
