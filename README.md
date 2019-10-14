@@ -64,7 +64,7 @@ The expected/assumed behavior of the application is listed below.
 - [ ] displays 'Closed' if the `closed` prop is `true` and 'Open' if otherwise
 - [ ] displays 'Locked' if the `locked` prop is `true` and 'Unlocked' if otherwise
 - [x] when `locked` or `closed` use the `red-led` class
-- [ ] when `unlocked` or `open` use the `green-led` class
+- [x] when `unlocked` or `open` use the `green-led` class
 
 ### Controls Component
 

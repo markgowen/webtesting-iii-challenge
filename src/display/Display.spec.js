@@ -16,11 +16,18 @@ test('displays if gate is open/closed and if it is locked/unlocked', () => {
   getByText(/unlocked/i);
 });
 
-test('displays Closed if the closed prop is true and Open if otherwise', () => {
-  const { getByText } = render(<Display closed={false} />);
-//   const label = getByText(/closed/i);
-  getByText((content, element) => element.className.includes('red-led'))
-//   expect(label.className.includes('green-led'));
+test('when locked or closed use the red-led class', () => {
+  const { getByText } = render(<Display closed={true} />);
+  //   const label = getByText(/closed/i);
+  getByText((content, element) => element.className.includes('red-led'));
+  //   expect(label.className.includes('green-led'));
+});
+
+test('when unlocked or open use the green-led class', () => {
+  const { getByText } = render(<Display closed={true} />);
+  //   const label = getByText(/closed/i);
+  getByText((content, element) => element.className.includes('green-led'));
+  //   expect(label.className.includes('green-led'));
 });
 
 test('displays Locked if the locked prop is true and Unlocked if otherwise', () => {
